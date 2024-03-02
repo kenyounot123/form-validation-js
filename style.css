@@ -24,20 +24,34 @@ input {
   width: 100%;
   font-size: 2rem;
 }
-input:invalid {
+input:focus:invalid {
   border-color: #900;
   background-color: #fdd;
+  outline: none;
+}
+input:focus:valid {
+  border: 4px green solid;
+  background-color: greenyellow;
+  outline: none;
 }
 label {
   width: 100px;
   white-space: nowrap;
   font-size: 2rem;
 }
-.submit-btn {
+#submit-btn {
   padding: 1em 2em;
   max-width: 90%;
   text-align: center;
   width: 100px;
+}
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 1.2rem;
+  color: white;
+  background-color: #900;
 }
 @media (min-width: 700px) {
   .form-field {
